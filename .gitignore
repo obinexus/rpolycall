@@ -1,0 +1,7 @@
+/build/
+/lib/
+*.a
+*.dll
+*.o
+*.so
+*.Rcheck/

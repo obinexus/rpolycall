@@ -1,0 +1,6 @@
+# rpolycallrc - read-only R runtime overrides for libpolycall
+
+log_level=info
+max_connections=1000
+network_timeout=5000
+tls_enabled=false

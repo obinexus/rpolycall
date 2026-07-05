@@ -1,8 +1,11 @@
-# R adapter (scaffold)
+# Adapter boundary
 
-Implement the R adapter here. It must call across the FFI boundary only:
+`rpolycall.c` is the language-neutral native shim. It performs exactly one
+call to `polycall_ffi_run_config(config_path, 1)` and returns the status
+unchanged.
 
-    status = polycall_ffi_run_config("rpolycallrc", /*run=*/1)
+`rpolycall_r.c` is the R boundary. It validates a length-one character value,
+converts it to UTF-8, and returns the status as an R integer. `init.c` registers
+the `.Call` entry point and disables dynamic symbol lookup.
 
-Return/raise a R-native error when `status` is non-zero. Do not parse
-config or duplicate any core logic. See ../../../docs/adapter-pattern.md.
+Configuration parsing, networking, and runtime ownership stay in libpolycall.

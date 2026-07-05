@@ -1,0 +1,3 @@
+useDynLib(rpolycall, .registration = TRUE)
+export(polycall_run_config)
+export(polycall_run_config_or_stop)

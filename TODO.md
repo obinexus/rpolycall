@@ -1,14 +1,15 @@
-# TODO — rpolycall (R)
+# TODO — rpolycall
 
-Status: 🧩 scaffolded adapter for libpolycall 1.5.0. Honestly not yet wired to
-the core — this file tracks the remaining work. Rolled up in
-[../../docs/release/TODO-1.5.md](../../docs/release/TODO-1.5.md).
+Status: implemented thin R adapter and npm source distribution.
 
-- [x] Folder structure, manifest, and `rpolycallrc` (shared schema)
-- [ ] Locate/generate R FFI bindings for `polycall_ffi.h`
-- [ ] Implement the thin adapter in `src/` (idioms -> `polycall_ffi_run_config`)
-- [ ] Add a runnable example under `examples/`
-- [ ] Add a smoke test under `tests/`
-- [ ] Confirm `scripts/verify-dry.sh` passes (no core duplication)
+- [x] Add the generated libpolycall FFI contract and public adapter header.
+- [x] Implement exact one-hop native status forwarding.
+- [x] Add a registered R `.Call` boundary with UTF-8 path conversion.
+- [x] Add R functions, installed default config, example, and mock tests.
+- [x] Add public npm metadata and recursive relative-directory indexes.
+- [x] Add package/source checks and mandatory prepack verification.
+- [ ] Run `npm run test:r` on a host with R and its native toolchain installed.
+- [ ] Exercise an installed R package against a real libpolycall 1.5 build.
+- [ ] Publish `@obinexusltd/rpolycall` after npm authentication is confirmed.
 
-Do not add config parsing or runtime logic here — adapt the core only.
+Keep parser, networking, and runtime logic in libpolycall.

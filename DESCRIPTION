@@ -1,0 +1,12 @@
+Package: rpolycall
+Type: Package
+Title: R Binding for libpolycall
+Version: 1.0.0
+Authors@R: person("Nnamdi Michael", "Okpala", email = "okpalan@protonmail.com", role = c("aut", "cre"))
+Description: Provides a thin registered native interface to the libpolycall
+    configuration runner. The package forwards UTF-8 configuration paths and
+    returns core status codes without implementing configuration or runtime logic.
+License: MIT + file LICENSE
+Encoding: UTF-8
+NeedsCompilation: yes
+SystemRequirements: libpolycall (>= 1.5)

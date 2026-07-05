@@ -1,0 +1,2 @@
+PKG_CPPFLAGS = -I../include -I../generated
+PKG_LIBS = $(POLYCALL_LIBS)
